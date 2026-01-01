@@ -4,6 +4,8 @@ import Player from './components/Player';
 import { songService } from './services/songService';
 import './App.css';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 function App() {
   const [songs, setSongs] = useState([]);
   const [currentSong, setCurrentSong] = useState(null);
@@ -21,7 +23,7 @@ function App() {
       setSongs(data);
       setError(null);
     } catch (err) {
-      setError('Failed to load songs. Make sure the backend is running on http://localhost:8080');
+      setError(`Failed to load songs. Make sure the backend is running on ${API_BASE_URL}`);
       console.error('Error loading songs:', err);
     } finally {
       setLoading(false);

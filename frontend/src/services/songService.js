@@ -1,6 +1,8 @@
 // API Base URL - uses environment variable in production, localhost in development
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api';
 
+console.log("api base urllllllllllllll: ", API_BASE_URL);
+
 export const songService = {
     // Get all songs
     getAllSongs: async () => {
