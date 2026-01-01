@@ -29,6 +29,7 @@ This guide explains how to deploy the Spring Boot backend to Koyeb.
 3. **Configure the deployment**:
    - **Builder**: Docker
    - **Dockerfile path**: `backend/Dockerfile`
+   - **Build context**: `.` (repository root - leave as default)
    - **Port**: 8080
    - **Instance type**: Choose based on your needs (Free tier available)
    - **Region**: Select closest to your users
